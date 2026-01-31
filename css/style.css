@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*=== ROOT ===*/
+:root {
+  --color-primary: #00b4d8;
+  --color-background: #001845;
+  --color-text: #f0f8ff;
+  --color-text-secondary: #b9c8c8;
+  --color-subtitle: #00b4d8;
+  --color-title: #f0f8ff;
+  --color-card: #021331;
+}
+
+/*=== BODY ===*/
+body {
+  font-family: "Source Code Pro", monospace;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/*=== HEADER ===*/
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 14, 41, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 10rem 1.5rem 10rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+header nav {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.75rem;
+}
+
+nav ul li a {
+  color: var(--color-text);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#logotipo-jose {
+  width: 5rem;
+  height: auto;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-text);
+  transition: 0.3s;
+}
+
+/*=== HERO ===*/
+#hero {
+  padding: 10% 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#hero-text {
+  text-transform: uppercase;
+}
+
+#hero-text h1 {
+  font-size: 3rem;
+}
+
+#hero-image img {
+  height: 25rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 100%;
+}
+
+/*=== RESPONSIVO PARA CELULARES ===*/
+@media (max-width: 480px) {
+  /*=== HEADER MOBILE ===*/
+  header {
+    padding: 1rem 1.5rem;
+  }
+
+  header nav {
+    gap: 1rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  #logotipo-jose {
+    width: 5rem;
+    height: auto;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /*=== HERO MOBILE ===*/
+  #hero {
+    padding: 4rem 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  #hero-text h1 {
+    font-size: 2rem;
+  }
+
+  #hero-image img {
+    height: 16rem;
+  }
+}
