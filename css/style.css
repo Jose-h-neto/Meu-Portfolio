@@ -33,6 +33,7 @@ header {
   backdrop-filter: blur(10px);
   padding: 1.5rem 10rem;
   border-bottom: 2px solid var(--color-primary);
+  z-index: var(--z-header);
 }
 
 header nav {
@@ -137,7 +138,8 @@ body.menu-open {
 }
 
 /*=== HERO ===*/
-#hero {
+.hero {
+  z-index: var(--z-content);
   padding: 5% 10rem;
   display: flex;
   justify-content: space-between;
@@ -258,7 +260,7 @@ p.typing-wrapper {
 }
 
 #habilidades .box {
-  min-width: 200px;
+  min-width: 300px;
   background-color: rgba(255, 255, 255, 0.03);
   text-align: center;
   display: flex;
@@ -269,10 +271,16 @@ p.typing-wrapper {
   border-style: solid;
   border-color: rgba(0, 180, 216, 0.1);
   border-image: initial;
-  padding: 30px 20px;
+  padding: 1.5rem 1.5rem;
   border-radius: 15px;
   transition: 0.3s;
   gap: 10px;
+}
+
+#habilidades .box:hover {
+  background-color: rgba(0, 180, 216, 0.08);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.3);
 }
 
 #habilidades .box img {
@@ -283,8 +291,89 @@ p.typing-wrapper {
     filter 0.3s;
 }
 
-/*=== RESPONSIVO PARA CELULARES ===*/
-@media (max-width: 480px) {
+/* === CONTATO ===*/
+#contato {
+  padding: clamp(2rem, 5vw, 5rem) clamp(2rem, 5vw, 10rem);
+  text-align: center;
+}
+
+#contato h2 {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+#contato .icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 5vw, 2.5rem);
+}
+
+#contato .title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#contato .description-contact {
+  font-size: small;
+}
+
+#contato .title:hover {
+  color: var(--color-primary);
+}
+
+#contato .icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 220px;
+  flex: 1 1 180px;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#contato .icons a:hover {
+  transform: translateY(-4px);
+}
+
+#contato .icons a .box {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(0, 180, 216, 0.2);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contato .icons a .box img {
+  width: 32px;
+  height: 32px;
+}
+
+#contato .icons a p {
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* === FOOTER === */
+#footer {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: rgba(0, 14, 41, 0.6);
+  color: var(--color-text-secondary, #b9c8c8);
+}
+
+/*============== RESPONSIVO PARA TELAS PEQUENAS =============*/
+@media (200px <= width <= 1040px) {
   /*=== HEADER MOBILE ===*/
   header {
     padding: 1rem 1.5rem;
@@ -313,7 +402,7 @@ p.typing-wrapper {
   }
 
   /*=== HERO MOBILE ===*/
-  #hero {
+  .hero {
     padding: 1.5rem 1.5rem 0rem 1.5rem;
     flex-direction: column;
     text-align: center;
@@ -344,7 +433,6 @@ p.typing-wrapper {
   #hero-welcome p {
     padding: 0.1em 1.5em;
     font-weight: 500;
-    color: var(--color-primary);
   }
 
   #hero-text h1 {
@@ -373,5 +461,22 @@ p.typing-wrapper {
   /*=== HABILIDADES ===*/
   #habilidades {
     padding: 1.5rem 1.5rem;
+  }
+
+  #habilidades .box {
+    min-width: 120px;
+  }
+
+  /* === CONTATO ===*/
+  @media (max-width: 480px) {
+    #contato .icons {
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    #contato .icons a {
+      flex: 1 1 140px;
+      max-width: 180px;
+    }
   }
 }
