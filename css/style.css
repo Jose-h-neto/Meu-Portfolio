@@ -188,6 +188,7 @@ p.typing-wrapper {
 }
 
 #hero-image img {
+  margin: 2rem 0rem 2rem 0rem;
   height: 25rem;
   border: 2px solid var(--color-primary);
   border-radius: 100%;
@@ -214,22 +215,72 @@ p.typing-wrapper {
 }
 
 /*=== SOBRE ===*/
-.sobre {
+#sobre {
   text-align: center;
-  padding: 1.5rem 10rem;
+  padding: 0rem 10rem;
 }
 
-.sobre h2 {
+#sobre h2 {
   text-transform: uppercase;
   color: var(--color-primary);
   margin: 2%;
 }
 
-.sobre p {
+#sobre p {
   font-size: 1rem;
   line-height: 2;
   color: var(--color-text);
   font-size: 1.2rem;
+}
+
+/*=== HABILIDADES ===*/
+
+#habilidades {
+  padding: 0rem 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+#habilidades p {
+  font-weight: 700;
+}
+
+#habilidades h2 {
+  margin: 5%;
+}
+
+#habilidades .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+#habilidades .box {
+  min-width: 200px;
+  background-color: rgba(255, 255, 255, 0.03);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 calc(25% - 20px);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(0, 180, 216, 0.1);
+  border-image: initial;
+  padding: 30px 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+  gap: 10px;
+}
+
+#habilidades .box img {
+  width: 50px;
+  height: 50px;
+  transition:
+    transform 0.3s,
+    filter 0.3s;
 }
 
 /*=== RESPONSIVO PARA CELULARES ===*/
@@ -263,7 +314,7 @@ p.typing-wrapper {
 
   /*=== HERO MOBILE ===*/
   #hero {
-    padding: 4rem 1.5rem;
+    padding: 1.5rem 1.5rem 0rem 1.5rem;
     flex-direction: column;
     text-align: center;
     gap: 2rem;
@@ -301,21 +352,26 @@ p.typing-wrapper {
   }
 
   /*=== SOBRE ===*/
-  .sobre {
+  #sobre {
     padding: 1.5rem 1.5rem;
   }
 
-  .sobre h2 {
+  #sobre h2 {
     text-align: center;
     text-transform: uppercase;
     color: var(--color-primary);
     margin: 2%;
   }
 
-  .sobre p {
+  #sobre p {
     font-size: 1rem;
     line-height: 1.7;
     color: var(--color-text);
     font-size: 1.2rem;
+  }
+
+  /*=== HABILIDADES ===*/
+  #habilidades {
+    padding: 1.5rem 1.5rem;
   }
 }
