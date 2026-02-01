@@ -31,7 +31,7 @@ header {
   top: 0;
   background-color: rgba(0, 14, 41, 0.4);
   backdrop-filter: blur(10px);
-  padding: 1.5rem 10rem 1.5rem 10rem;
+  padding: 1.5rem 10rem;
   border-bottom: 2px solid var(--color-primary);
 }
 
@@ -138,7 +138,7 @@ body.menu-open {
 
 /*=== HERO ===*/
 #hero {
-  padding: 10% 10rem;
+  padding: 5% 10rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -147,7 +147,7 @@ body.menu-open {
 
 .typing-wrapper {
   display: block;
-  min-height: 1.5em;
+  min-height: 2.25em;
 }
 
 h1.typing-wrapper {
@@ -155,7 +155,7 @@ h1.typing-wrapper {
 }
 
 p.typing-wrapper {
-  min-height: 2.4rem;
+  min-height: 2.6rem;
 }
 
 #hero-text {
@@ -211,6 +211,25 @@ p.typing-wrapper {
 .btn-principal button:hover {
   opacity: 0.9;
   transform: translateY(-2px);
+}
+
+/*=== SOBRE ===*/
+.sobre {
+  text-align: center;
+  padding: 1.5rem 10rem;
+}
+
+.sobre h2 {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin: 2%;
+}
+
+.sobre p {
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--color-text);
+  font-size: 1.2rem;
 }
 
 /*=== RESPONSIVO PARA CELULARES ===*/
@@ -279,5 +298,24 @@ p.typing-wrapper {
 
   #hero-text h1 {
     font-size: 3rem;
+  }
+
+  /*=== SOBRE ===*/
+  .sobre {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .sobre h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin: 2%;
+  }
+
+  .sobre p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    font-size: 1.2rem;
   }
 }
