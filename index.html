@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,37 +15,75 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Portfolio José Neto | Desenvolvedor</title>
-    <script defer src="./script/script.js"></script>
+    <script type="module" src="./script/main.js"></script>
   </head>
 
   <body>
+    <!-- HEADER -->
     <header class="container">
       <nav aria-label="Menu Principal" id="header">
         <div id="logotipo-jose">
           <img src="./images/assets/logotipo-jose.svg" alt="logotipo-jose" />
         </div>
-        <!-- Menu Hamburguer para mobile-->
-        <button class="hamburger" aria-label="Abrir menu mobile">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+
+        <!-- Hamburger (ABRIR) -->
+        <div class="container-hamburger">
+          <button class="hamburger" aria-label="Abrir menu mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Menu Desktop -->
         <ul class="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#sobre">Sobre Mim</a></li>
           <li><a href="#projeto">Projetos</a></li>
-          <li><a href="#contato">Contado</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </header>
+
+    <!-- OVERLAY MENU MOBILE -->
+    <div class="menu-overlay">
+      <!-- Hamburger vira X (FECHAR) -->
+      <button class="hamburger overlay-close" aria-label="Fechar menu mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="menu-mobile">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#projeto">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- MAIN -->
     <main>
       <div class="container" id="hero">
         <div id="hero-text">
-          <p id="hero-welcome">Olá, seja bem vindo(a)!</p>
-          <h1 id="hero-text">Me chamo José Neto</h1>
-          <button id="btn-cv">Download CV</button>
-          <button id="btn-contato">Entrar em contato</button>
+          <div id="hero-welcome">
+            <p>Olá, seja bem vindo(a)!</p>
+          </div>
+
+          <h1 class="typing-wrapper">
+            <span id="typing-title"></span>
+          </h1>
+
+          <p class="typing-wrapper">
+            <span id="typing-subtitle"></span>
+          </p>
+
+          <div class="btn-principal">
+            <button id="btn-cv">Download CV</button>
+            <button id="btn-contato">Entrar em contato</button>
+          </div>
         </div>
+
         <div id="hero-image">
           <img src="./images/banner.jpg" alt="programador" />
         </div>
