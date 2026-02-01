@@ -184,7 +184,7 @@ p.typing-wrapper {
 #hero-welcome p {
   padding: 0.1em 1.5em;
   font-weight: 500;
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 #hero-image img {
@@ -194,14 +194,14 @@ p.typing-wrapper {
 }
 .btn-principal {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .btn-principal button {
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.85em;
+  font-size: 1em;
   background: linear-gradient(135deg, var(--color-primary), #07798d);
-  padding: 0.8em 1.5em;
+  padding: 1.25em 1.5em;
   border: none;
   border-radius: 100px;
   color: var(--color-text);
@@ -250,8 +250,17 @@ p.typing-wrapper {
     gap: 2rem;
   }
 
+  .btn-principal {
+    flex-direction: column;
+    margin: 2% 15%;
+  }
+
+  .btn-principal button {
+    padding: 1em 1em;
+  }
+
   #hero-text h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   #hero-image img {
@@ -266,5 +275,9 @@ p.typing-wrapper {
     padding: 0.1em 1.5em;
     font-weight: 500;
     color: var(--color-primary);
+  }
+
+  #hero-text h1 {
+    font-size: 2.5rem;
   }
 }
