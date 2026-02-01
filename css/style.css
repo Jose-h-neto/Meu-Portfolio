@@ -471,7 +471,8 @@ p.typing-wrapper {
   @media (max-width: 480px) {
     #contato .icons {
       justify-content: center;
-      gap: 1.5rem;
+      margin-inline: 4rem;
+      gap: 2rem;
     }
 
     #contato .icons a {
