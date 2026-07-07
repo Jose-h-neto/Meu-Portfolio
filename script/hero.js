@@ -10,8 +10,7 @@ export function initHeroTyping() {
   const titleText = "Me chamo José Neto";
 
   const phrases = [
-    "Desenvolvedor | HTML | CSS | JavaScript | PHP |",
-    "| Next.js | React.js | Node.js | C# | Python |",
+    "Desenvolvedor | HTML | CSS | JavaScript | Node.js | SQL",
   ];
 
   let phraseIndex = 0;
